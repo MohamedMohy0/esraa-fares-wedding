@@ -79,6 +79,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "حفل زفاف فارس و إسراء" },
+      { name: "twitter:description", content: "دعوة زفاف فارس و إسراء — 18 مايو 2026" },
     ],
     links: [
       {
