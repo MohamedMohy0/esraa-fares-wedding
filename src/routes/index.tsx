@@ -39,14 +39,14 @@ function CornerOrnament({ className = "" }: { className?: string }) {
     >
       <defs>
         <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="oklch(0.88 0.09 85)" />
-          <stop offset="50%" stopColor="oklch(0.72 0.16 78)" />
-          <stop offset="100%" stopColor="oklch(0.6 0.13 65)" />
+          <stop offset="0%" stopColor="#FFE978" />
+          <stop offset="50%" stopColor="#FFD700" />
+          <stop offset="100%" stopColor="#C9A227" />
         </linearGradient>
       </defs>
       <path d="M5 5 Q 50 5 50 50" />
       <path d="M5 5 Q 5 50 50 50" />
-      <circle cx="5" cy="5" r="2.5" fill="oklch(0.72 0.16 78)" stroke="none" />
+      <circle cx="5" cy="5" r="2.5" fill="#FFD700" stroke="none" />
       <path d="M15 15 Q 30 18 35 35 Q 18 30 15 15 Z" opacity="0.7" />
       <path d="M50 50 Q 40 40 30 50 Q 40 45 50 50" opacity="0.5" />
     </svg>
@@ -55,12 +55,13 @@ function CornerOrnament({ className = "" }: { className?: string }) {
 
 function Countdown() {
   const target = new Date("2026-05-18T19:00:00").getTime();
-  const [now, setNow] = useState(() => Date.now());
+  const [now, setNow] = useState<number | null>(null);
   useEffect(() => {
+    setNow(Date.now());
     const id = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(id);
   }, []);
-  const diff = Math.max(0, target - now);
+  const diff = now === null ? 0 : Math.max(0, target - now);
   const days = Math.floor(diff / 86400000);
   const hours = Math.floor((diff / 3600000) % 24);
   const mins = Math.floor((diff / 60000) % 60);

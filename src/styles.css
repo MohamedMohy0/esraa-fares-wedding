@@ -42,9 +42,9 @@
   --foreground: oklch(0.25 0.03 60);
 
   --cream: oklch(0.98 0.012 85);
-  --gold: oklch(0.78 0.14 82);
-  --gold-soft: oklch(0.88 0.09 85);
-  --gold-deep: oklch(0.62 0.13 70);
+  --gold: #FFD700;
+  --gold-soft: #FFE978;
+  --gold-deep: #C9A227;
 
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.25 0.03 60);
@@ -64,10 +64,10 @@
   --input: oklch(0.92 0.03 85);
   --ring: oklch(0.78 0.14 82);
 
-  --gradient-gold: linear-gradient(135deg, oklch(0.88 0.09 85), oklch(0.72 0.16 78), oklch(0.6 0.13 65));
-  --gradient-shine: linear-gradient(120deg, oklch(0.95 0.06 85) 0%, oklch(0.78 0.16 80) 45%, oklch(0.95 0.08 85) 55%, oklch(0.65 0.14 70) 100%);
-  --gradient-bg: radial-gradient(ellipse at top, oklch(0.99 0.015 85), oklch(0.97 0.02 80) 60%, oklch(0.95 0.03 78));
-  --shadow-gold: 0 10px 40px -10px oklch(0.72 0.14 80 / 0.35);
+  --gradient-gold: linear-gradient(135deg, #FFE978, #FFD700, #C9A227);
+  --gradient-shine: linear-gradient(120deg, #FFF4B0 0%, #FFD700 45%, #FFE978 55%, #B8860B 100%);
+  --gradient-bg: radial-gradient(ellipse at top, #FFFEF8, #FFFBE6 60%, #FFF7D6);
+  --shadow-gold: 0 10px 40px -10px rgba(255, 215, 0, 0.45);
   --shadow-soft: 0 4px 20px -4px oklch(0.6 0.08 70 / 0.15);
 }
 
